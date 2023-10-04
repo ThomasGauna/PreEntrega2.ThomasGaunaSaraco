@@ -63,6 +63,11 @@ const listaDeAnafe = [
     new Anafe('Anafe eléctrico 2 Pro', 'Electrico', '2 hornallas', 31.399)
 ];
 
+function agregarAlCarrito(producto) {
+    miCarrito.push(producto);
+    alert('Producto agregado al carrito.');
+  }
+
 const listaTotal = listaDeCarpa.concat(listaDeLinterna, listaDeAnafe);
 
 const miCarrito = [];
