@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./style.css"></scriptsrc></script>
+    <script src="./funcionesYObj.js"></script>
+    <title>Document</title>
+</head>
+    <body>
+
+            <h1 id="heading" class="text-center">Carrito de Compras</h1>
+            <h1 id="heading2" class="text-center">Bienvenido al carrito</h1>
+            <div id="contenedor-tabla" class="container m-5">
+                <table id ="tablaProductos" class="table table-dark text-center">         
+                    <thead class="thead-dark">
+                        <tr id="trId">
+                            <th># item</th>
+                            <th>Nombre</th>
+                            <th>Color</th>
+                            <th>Capacidad</th>
+                            <th>Precio Unitario</th>
+                        </tr>
+                    </thead>
+                <tbody id = "items" class="table-striped">
+                        <tr>
+                            <td>1</td>
+                            <td>Carpa Kabú Pro</td>
+                            <td>Azul marino</td>
+                            <td>6 personas</td>
+                            <td>$166.399</td>
+                            <td><button id = "botonAgregar"onclick="agregarAlCarrito('Carpa Kabú Pro', 166.399)">Agregar al Carrito</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Carpa Atenas Pro</td>
+                            <td>Naranja</td>
+                            <td>2 personas</td>
+                            <td>$32.799</td>
+                            <td><button onclick="agregarAlCarrito('Carpa Atenas Pro', 32.799)">Agregar al Carrito</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Carpa Aguila</td>
+                            <td>Celeste</td>
+                            <td>4 personas</td>
+                            <td>$95.299</td>
+                            <td><button onclick="agregarAlCarrito('Carpa Aguila', 95.299)">Agregar al Carrito</button></td>
+                        </tr>
+                </tbody>
+                    <tfoot>
+                        <tr>
+                            <th id="total"></th>
+                        </tr>
+                    </tfoot>
+            </table>
+        </div>
+        
+        <h2 class="text-center">Carrito de Compras</h2>
+        <ul id="carrito">
+        <div id="contenedor-tabla" class="container m-5">    
+            <table id = "tablaCarrito" class="table table-dark text-center">         
+                <thead class="thead-dark">
+                    <tr id="trId">
+                        <th># item</th>
+                        <th>Nombre</th>
+                        <th>Color</th>
+                        <th>Capacidad</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        </ul>
+
+    </body>
+</html>

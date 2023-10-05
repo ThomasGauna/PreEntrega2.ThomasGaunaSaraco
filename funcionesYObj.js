@@ -71,3 +71,44 @@ function agregarAlCarrito(producto) {
 const listaTotal = listaDeCarpa.concat(listaDeLinterna, listaDeAnafe);
 
 const miCarrito = [];
+/*
+miCarrito.push(new Carpa('Carpa Kabú Pro', 'Azul marino', '6 personas', 166.399));
+miCarrito.push(new Carpa('Carpa Atenas Pro', 'Naranja', '2 personas', 32.799));
+miCarrito.push(new Carpa('Carpa Aguila', 'Celeste', '4 personas', 95.299));
+*/
+    function dibujarTabla(){
+        const bodyTabla = document.getElementById('tablaCarrito');
+        bodyTabla.innerHTML = '';
+        
+        miCarrito.forEach((Carpa,index) => {
+            bodyTabla.innerHTML = bodyTabla.innerHTML +
+            `
+            <tr>
+                <th scope="row">${index+1}</th>
+                <td>${Carpa.nombre}</td>
+                <td>${Carpa.color}</td>
+                <td>${Carpa.capacidad}</td>
+                <td>${Carpa.precio}</td>
+            </tr>
+            `;
+        })
+    }
+
+    function agregarAlCarrito(nombreProducto, precioProducto,capacidadProducto,colorProducto) {
+        miCarrito.push({
+            nombre: nombreProducto,
+            precio: precioProducto,
+            capacidad: capacidadProducto,
+            color: colorProducto,
+        });
+    
+        dibujarTabla();
+    }
+
+    function calcularTotal() {
+        const totalElement = document.getElementById('total');
+        let total = 0;      
+        miCarrito.forEach((producto) => {
+            total += producto.precio;
+        });
+    }
